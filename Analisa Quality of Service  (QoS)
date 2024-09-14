@@ -1,0 +1,78 @@
+Assesment:
+1. Apa kegiatan yang dilakukan dan berapa lama kalian melakukan capturing packet.
+    Kegiatan yang dilakukan adalah capturing packet menggunakan aplikasi Wireshark selama ±15 menit, meliputi:
+       - Streaming video
+       - Upload dan download file & video
+       - Game online
+    Durasi capturing packet: 15 menit 17 detik (15:28:22 - 15:43:39)
+
+2. Buatlah tabel hasil pengukuran dari Throughput, Packet Loss, Delay, dan Jitter.
+    | Pengukuran     | Nilai            | Kategori         |
+    |----------------|------------------|------------------|
+    | Throughput     | 1.749 kbps       | Baik             |
+    | Packet Loss    | 0%               | Sangat Baik      |
+    | Delay          | 5 ms             | Baik             |       
+    | Jitter         | Tidak Terdeteksi | Tidak Terdeteksi |       
+
+3. Tulislah hasil perhitungan dengan rumus dari Throughput, Packet Loss, Delay, dan Jitter.
+a. Throughput
+    Throughput = Jumlah Data yang Ditranfer / Waktu Transfer
+    Throughput = 200721090 / 917,661 
+    Misalkan jumlah data yang ditransfer = 200721090 byte (atau sekitar 200,72 MB). 
+    Waktu yang dihabiskan untuk transfer adalah 15 menit dan 17 detik, atau sekitar 917,661 detik. 
+    Throughput dihitung sebagai = 218 kB (atau sekitar 1,749 kbps)
+
+b. Packet Loss
+    Packet Loss dihitung dengan rumus:
+    Packet Loss = (Jumlah Paket yang Hilang / Jumlah Paket yang Dikirim) * 100%
+    tidak ada paket yang hilang (dropped packets = 0). 
+    Oleh karena itu, Packet Loss = (0 / Total Paket) * 100% = 0%
+
+c. Delay
+    Delay dihitung sebagai waktu yang dibutuhkan paket untuk melakukan perjalanan dari sumber ke tujuan. Delay dapat dihitung dengan rumus:
+    Delay = Total Waktu (s) / Jumlah Paket
+    Rata-rata waktu paket untuk mencapai tujuan dihitung sebagai:
+    Delay = Total Waktu / Jumlah Paket = 0.005 (atau sekitar 5 ms)
+
+d. Jitter
+    Jitter mengukur variasi dalam delay paket dan dapat dihitung dengan rumus:
+    Jitter = sqrt(sum((D_i - D_avg)^2) / n)
+    Dimana:
+        D_i adalah delay pada paket ke-i,
+        D_avg adalah rata-rata delay,
+        n adalah jumlah paket.
+    Namun, berdasarkan data yang tersedia data delay per paket tidak ada pada data ini, sehingga tidak ada informasi tentang delay yang dapat dihitung dari data ini.
+
+e. Rata-Rata Indeks QoS
+    Untuk menghitung rata-rata indeks QoS berdasarkan kategori:
+    Rata-Rata Indeks = (Indeks Throughput + Indeks Packet Loss + Indeks Delay + Indeks Jitter) / Jumlah Pengukuran
+    Dalam hal ini:
+        Indeks Throughput = 3
+        Indeks Packet Loss = 4
+        Indeks Delay = 3
+        Indeks Jitter = 3
+    Maka:
+    Rata-Rata Indeks = (3 + 4 + 3 + 3) / 4 = 13 / 4 = 3.25
+    Jadi, rata-rata indeks QoS adalah 3.25.
+
+4. Buatlah tabel indeks yang didapatkan dari pengukuran Quality of Service (QoS).
+    | Pengukuran      | Keterangan               | Indeks       | Kategori     |
+    |-----------------|--------------------------|--------------|--------------|
+    | Throughput      | 1.749 kbps               | 3            | Baik         |
+    | Packet Loss     | 0%                       | 4            | Baik         |
+    | Delay           | 5 ms                     | 3            | Baik         |
+    | Jitter          | -                        | 3            | Baik         |
+    | Rata-Rata Indeks| -                        | 3.25         | Baik         |
+
+5. Buatlah Kesimpulan.
+    Dari hasil pengukuran QoS:
+    - Throughput sebesar 1,749 kbps menunjukkan kualitas yang baik untuk transfer data.
+    - Packet Loss sebesar 0% menunjukkan tidak ada kehilangan paket, yang berarti kualitas jaringan sangat baik.
+    - Delay sebesar 5 ms menunjukkan kualitas yang baik untuk jaringan, karena latensi yang rendah.
+    - Jitter tidak dapat dihitung dari data yang ada, namun jika diasumsikan nilainya baik, maka variasi delay dalam paket relatif stabil.
+
+6. Sumber/referensi/daftar pustaka.
+   - High-Performance Communication Networks* (2nd Edition) - Jean Walrand & Pravin Varaiya Retrieved from (https://www.amazon.com/High-Performance-Communication-Networks-Jean-Walrand/dp/1558605746)
+   - Quality of Service in IP Networks: The Lost Research of QoS - Grenville Armitage Retrieved (from https://books.google.com/books?id=1NtYpQAACAAJ)
+   - Computer Networking: A Top-Down Approach"* – James F. Kurose, Keith W. Ross Retrieved from (https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149)
+   - Menghitung parameter QoS (Throughput, Packet Loss, Delay, & Jitter Retrieved from (https://youtu.be/ms1QbRnrEK8?feature=shared)
